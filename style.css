@@ -1,5 +1,7 @@
 /* styles.css */
 body {
+<script src="https://cdn.tailwindcss.com"></script>
+
     font-family: Arial, sans-serif;
     background-color: #fce4ec;
     color: #333;
