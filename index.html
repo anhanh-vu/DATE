@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hẹn Hò Ngọt Ngào</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chào em yêu!</h1>
+        <p>Anh muốn mời em đi chơi vào cuối tuần này. Chúng ta sẽ đi đâu nhỉ?</p>
+
+        <form id="dateForm">
+            <label for="date">Chọn thời gian:</label>
+            <input type="date" id="date" required>
+
+            <label for="place">Chọn địa điểm:</label>
+            <input type="text" id="place" placeholder="Nơi bạn muốn đi" required>
+
+            <button type="submit">Gửi lời mời</button>
+        </form>
+
+        <div id="responseMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
