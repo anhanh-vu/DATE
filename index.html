@@ -24,6 +24,53 @@
 
         <div id="responseMessage"></div>
     </div>
+      <style>
+        .btn-choice {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container my-5 p-5 bg-white rounded shadow">
+        <h1 class="text-center text-danger mb-4">Chào em yêu!</h1>
+        <p class="text-center mb-4">Anh muốn mời em đi chơi vào cuối tuần này. Chúng ta sẽ đi đâu nhỉ?</p>
+
+        <!-- Các nút lựa chọn -->
+        <div class="text-center">
+            <button id="btnYes" class="btn btn-success btn-choice" onclick="selectChoice('Có')">Có</button>
+            <button id="btnNo" class="btn btn-danger btn-choice" onclick="selectChoice('Không')" disabled>Không</button>
+        </div>
+
+        <!-- Hiển thị kết quả -->
+        <div id="responseMessage" class="mt-4 text-center"></div>
+    </div>
+
+    <script>
+        // Hàm xử lý lựa chọn
+        function selectChoice(choice) {
+            var responseMessage = document.getElementById('responseMessage');
+            var btnYes = document.getElementById('btnYes');
+            var btnNo = document.getElementById('btnNo');
+            
+            if (choice === 'Có') {
+                responseMessage.innerHTML = "<p class='text-success'>Em đã chọn 'Có'! Thật tuyệt vời!</p>";
+                // Vô hiệu hóa nút "Có" và "Không" không thể chọn lại
+                btnYes.disabled = true;
+                btnNo.disabled = false;
+            } else if (choice === 'Không') {
+                responseMessage.innerHTML = "<p class='text-danger'>Em đã chọn 'Không'. Chúng ta sẽ tìm cách khác!</p>";
+                // Vô hiệu hóa nút "Không" và không thể chọn lại
+                btnNo.disabled = true;
+                btnYes.disabled = false;
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="script.js"></script>
 </body>
